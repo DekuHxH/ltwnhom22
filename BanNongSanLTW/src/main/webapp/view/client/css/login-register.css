@@ -1,0 +1,64 @@
+body {
+    
+    background-image: url(login.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2 {
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.form {
+    background:rgba(0,0,0,0.8);
+    width: 350px;
+    margin: 80px auto;
+    border-radius: 30px;
+    padding: 30px; 
+    text-align: center;
+}
+
+
+.form input { 
+    display: block;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background: whitesmoke;
+    width: 100%;
+    margin: 0 auto 15px;
+    outline: 0;
+    border: 0;
+    padding: 15px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.form .message {
+    margin: 15px auto 0;
+    color: gray;
+    font-size: 14px;
+}
+
+.form .message a {
+    color: green;
+    text-decoration: none;
+}
