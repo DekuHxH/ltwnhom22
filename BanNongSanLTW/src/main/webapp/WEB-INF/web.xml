@@ -6,13 +6,12 @@
 	<display-name>BanNongSanLTW</display-name>
 
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-		<welcome-file>default.htm</welcome-file>
+		<welcome-file>view/client/index.jsp</welcome-file>
 	</welcome-file-list>
+	<error-page>
+	    <error-code>404</error-code>
+	    <location>/404</location>
+	</error-page>
 
 	<servlet>
 		<servlet-name>LoginController</servlet-name>
