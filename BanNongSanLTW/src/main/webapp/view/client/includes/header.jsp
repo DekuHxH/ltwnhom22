@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nông Sản 22| Home</title>
+<title>Nông Sản 22</title>
 
 <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
@@ -76,7 +76,7 @@
                 <div class="aa-language">
                   <div class="dropdown">
                     <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      <img src="${url}/img/flag/vietnam.png" alt="english flag">Việt Nam
+                      <img src="${url}/images/vietnam.png" alt="english flag">Việt Nam
                     </a>
                   </div>
                 </div>
@@ -93,7 +93,7 @@
 					<li class="hidden-xs"><a href="LogOut">Đăng xuất</a></li>
 					</c:if>
 					<c:if test="${sessionScope.username == null}">
-					<li><a href="LoginPage">Đăng nhập</a></li>
+					<li><a href="${pageContext.request.contextPath}/LoginPage">Đăng nhập</a></li>
 					</c:if>
 					</ul>
 				</div>
@@ -114,57 +114,53 @@
               <!-- logo  -->
               <div class="aa-logo">
                 <!-- Text based logo -->
-                <a href="index.html">
+                <a href="${pageContext.request.contextPath}/">
                   <span class="fa fa-shopping-cart"></span>
                   <p>Nhóm<strong>22</strong> <span>Bán nông sản</span></p>
                 </a>
                 <!-- img based logo -->
-                <!-- <a href="index.html"><img src="img/logo.jpg" alt="logo img"></a> -->
+                <!-- <a href="index.jsp"><img src="img/logo.jpg" alt="logo img"></a> -->
               </div>
               <!-- / logo  -->
                <!-- cart box -->
               <div class="aa-cartbox">
-                <a class="aa-cart-link" href="#">
+                <a class="aa-cart-link" href="${pageContext.request.contextPath}/view/client/cart">
                   <span class="fa fa-shopping-basket"></span>
                   <span class="aa-cart-title">Giỏ hàng</span>
-                  <span class="aa-cart-notify">?</span>
+                  <c:if test="${length_order != NULL}">
+                  	<span class="aa-cart-notify">${length_order}</span>
+                  </c:if>
                 </a>
                 <div class="aa-cartbox-summary">
                   <ul>
+                    <c:forEach items="${order.items}" var="item" >
                     <li>
-                      <a class="aa-cartbox-img" href="#"><img src="${url}/img/woman-small-2.jpg" alt="img"></a>
+                      <a class="aa-cartbox-img" href="${pageContext.request.contextPath}/view/client/cart"><img src="${pageContext.request.contextPath}/view/client/images/products/img-test/${item.product.image_link}" alt="img"></a>
                       <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
+                        <h4><a href="${pageContext.request.contextPath}/view/client/cart">${item.product.name}</a></h4>
+                        <p>${item.qty} x ${item.product.price * (1-((item.product.discount)/100))}00 VNĐ</p>
                       </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
                     </li>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="${url}/img/woman-small-1.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>                    
-                    <li>
-                      <span class="aa-cartbox-total-title">
-                        Total
+                   	</c:forEach>
+                  </ul>
+                  <div class="total-detailproduct">
+                  		<span class="aa-cartbox-total-title">
+                        <b>Tổng:</b>
                       </span>
                       <span class="aa-cartbox-total-price">
-                        $500
+                        ${sumprice} VNĐ
                       </span>
-                    </li>
-                  </ul>
-                  <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.html">Checkout</a>
+                  </div>
+                  <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/cart">Chi tiết</a>
+                  <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/checkout">Thanh toán</a>
                 </div>
               </div>
               <!-- / cart box -->
               <!-- search box -->
               <div class="aa-search-box">
-                <form action="">
-                  <input type="text" name="" id="" placeholder=" ">
-                  <button type="submit"><span class="fa fa-search"></span></button>
+                <form action="${pageContext.request.contextPath}/view/client/product/search" method="GET">
+                  <input type="text" name="s" id="" placeholder="Tìm kiếm sản phẩm..">
+                 <button class="serach-box"><span class="fa fa-search"></span></button>
                 </form>
               </div>
               <!-- / search box -->             
@@ -197,18 +193,19 @@
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-              <li><a href="index.html">Trang chủ</a></li>
-              <li><a href="#">Giới thiệu</a></li>
-              <li><a href="#">Sản phẩm <span class="caret"></span></a>
+              <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
+              <li><a href="">Giới thiệu</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/product">Sản phẩm <span class="caret"></span></a>
                 <ul class="dropdown-menu">  
-                  <li><a href="#">Rau củ</a></li>                                                                
-                  <li><a href="#">Trái cây</a></li>              
-                  <li><a href="#">Khác</a></li>           
+                  <li><a href="${pageContext.request.contextPath}/view/client/product-id?id=1">Rau củ</a></li>                                                                
+                  <li><a href="${pageContext.request.contextPath}/view/client/product-id?id=2">Trái cây</a></li>
+                  <li><a href="${pageContext.request.contextPath}/view/client/product-id?id=3">Các loại hạt</a></li>            
+                  <li><a href="${pageContext.request.contextPath}/view/client/product-id?id=4">Khác</a></li>           
                 </ul>
               </li>
-              <li><a href="#">Tin tức</a></li>
-              <li><a href="#">Chính sách</a></li>
-              <li><a href="#">Liên hệ</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/policy">Chính sách</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/orderGuide">Hướng dẫn</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/contact">Liên hệ</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

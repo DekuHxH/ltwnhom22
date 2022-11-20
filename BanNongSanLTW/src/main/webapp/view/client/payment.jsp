@@ -1,13 +1,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<c:url value = "/view/client/assets" var="url"/>
-  <!-- Start header section -->
-  <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
-  
-  
-  
+<%@ include file="/view/client/includes/header.jsp" %> 
+    
   <section id="aa-catg-head-banner">
-   <img src="${pageContext.request.contextPath}/view/client/assets/images/banner-product.png" alt="banner sản phẩm">
+   <img src="${pageContext.request.contextPath}/view/client/images/banner-product.png" alt="banner sản phẩm">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
@@ -49,7 +45,7 @@
      </div>
     </section>
     
-<!--  footer-->
- <jsp:include page = "./footer/footer.jsp" flush = "true" />
-<!-- end footer-->
-      
+ <%@ include file="/view/client//includes/footer.jsp" %>   
+  <%@ include file="/view/client//includes/script.jsp" %> 
+  </body>
+</html>

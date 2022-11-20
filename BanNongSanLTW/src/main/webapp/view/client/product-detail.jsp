@@ -1,21 +1,11 @@
-<%-- 
-    Document   : index
-    Created on : May 5, 2020, 10:57:00 PM
-    Author     : LENOVO
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<c:url value = "/view/client/assets" var="url"/>
-
-  <!-- Start header section -->
-  <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
-  <!-- / header section -->
+<%@ include file="/view/client/includes/header.jsp" %> 
+<c:url value = "/view/client" var="url"/>
   
 <!--  content -->
    <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-      <img src="${pageContext.request.contextPath}/view/client/assets/images/banner-product.png" alt="banner sản phẩm">
+      <img src="${pageContext.request.contextPath}/view/client/images/banner-product.png" alt="banner sản phẩm">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
@@ -45,7 +35,7 @@
                   <div class="aa-product-view-slider">                                
                     <div id="demo-1" class="simpleLens-gallery-container">
                       <div class="simpleLens-container">
-                        <div class="simpleLens-big-image-container"><a data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}" class="simpleLens-lens-image"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}" class="simpleLens-big-image"></a></div>
+                        <div class="simpleLens-big-image-container"><a data-lens-image="${pageContext.request.contextPath}/view/client/images/products/img-test/${detail_product.image_link}" class="simpleLens-lens-image"><img src="${pageContext.request.contextPath}/view/client/images/products/img-test/${detail_product.image_link}" class="simpleLens-big-image"></a></div>
                       </div>
                     
                     </div>
@@ -162,7 +152,7 @@
                 <c:forEach items="${productById}" var="product">
 	                <li>
 	                  <figure>
-	                    <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt=""></a>
+	                    <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/images/products/img-test/${product.image_link}" alt=""></a>
 	                    <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
 	                     <figcaption>
 	                      <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name}</a></h4>
@@ -201,8 +191,10 @@
   <!-- / product category -->
 <!--  end content-->
   
-<!--  footer-->
- <jsp:include page = "./footer/footer.jsp" flush = "true" />
-<!-- end footer-->
- 
+ <%@ include file="/view/client//includes/footer.jsp" %>   
+
+  <%@ include file="/view/client//includes/script.jsp" %> 
+
+  </body>
+</html>
   

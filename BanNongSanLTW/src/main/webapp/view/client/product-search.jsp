@@ -1,20 +1,11 @@
-<%-- 
-    Document   : index
-    Created on : May 5, 2020, 10:57:00 PM
-    Author     : LENOVO
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<c:url value = "/view/client/assets" var="url"/>
-  <!-- Start header section -->
-  <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
-  <!-- / header section -->
-  
+<%@ include file="/view/client/includes/header.jsp" %> 
+
 <!--  content -->
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${pageContext.request.contextPath}/view/client/assets/images/banner-product.png" alt="banner sản phẩm">
+   <img src="${pageContext.request.contextPath}/view/client/images/banner-product.png" alt="banner sản phẩm">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
@@ -56,7 +47,7 @@
 
 	                <li>
 	                  <figure>
-	                    <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></a>
+	                    <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/images/products/img-test/${product.image_link}" alt="${product.name}"></a>
 	                    <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
 	                    <figcaption>
 	                      <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name}</a></h4>
@@ -95,8 +86,8 @@
             <div class="aa-sidebar-widget">
               <h3>Danh mục</h3>
               <ul class="aa-catg-nav">
-              <c:forEach items="${catelist}" var="cate">
-              	<li><a href="${pageContext.request.contextPath}/view/client/product-id?id=${cate.id}">${cate.name}</a></li>
+              <c:forEach items="${catalist}" var="catalog">
+              	<li><a href="${pageContext.request.contextPath}/view/client/product-id?id=${catalog.id}">${catalog.name}</a></li>
               </c:forEach>                
               </ul>
             </div>
@@ -109,7 +100,7 @@
                 <ul>
                  <c:forEach items="${productlist}" var="product" end="2">
                   <li>
-                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"></a>
+                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/images/products/img-test/${product.image_link}"></a>
                     <div class="aa-cartbox-info">
                       <h4><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                       <c:choose>
@@ -142,9 +133,13 @@
   <!-- / product category -->
 <!--  end content-->
   
-<!--  footer-->
- <jsp:include page = "./footer/footer.jsp" flush = "true" />
-<!-- end footer-->
+  <%@ include file="/view/client//includes/footer.jsp" %>   
+
+  <%@ include file="/view/client//includes/script.jsp" %> 
+
+  </body>
+</html>
+
  
 
   

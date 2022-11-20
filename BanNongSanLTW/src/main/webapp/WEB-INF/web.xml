@@ -42,5 +42,132 @@
 		<servlet-name>LogOutController</servlet-name>
 		<url-pattern>/LogOut</url-pattern>
 	</servlet-mapping>
+	
+	
+	<!--  Client Router -->
+	<servlet>
+       <servlet-name>homePage</servlet-name>
+       <servlet-class>controller.HomeController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+       <servlet-name>homePage</servlet-name>
+       <url-pattern></url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+       <servlet-name>productDetail</servlet-name>
+       <servlet-class>controller.ProductDetailController</servlet-class>
+   </servlet>
+   <servlet-mapping>
+       <servlet-name>productDetail</servlet-name>
+       <url-pattern>/view/client/product-detail</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>ProductListClient</servlet-name>
+       <servlet-class>controller.ProductListClientController</servlet-class>
+   </servlet>
+   <servlet-mapping>
+       <servlet-name>ProductListClient</servlet-name>
+       <url-pattern>/view/client/product</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>ProductListOfCatalogClient</servlet-name>
+       <servlet-class>controller.ProductListOfCatalogClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>ProductListOfCatalogClient</servlet-name>
+       <url-pattern>/view/client/product-id</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>ProductSearch</servlet-name>
+       <servlet-class>controller.SearchController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>ProductSearch</servlet-name>
+       <url-pattern>/view/client/product/search</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+		<servlet-name>AddtoCartController</servlet-name>
+		<servlet-class>controller.AddtoCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddtoCartController</servlet-name>
+		<url-pattern>/view/client/add-cart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CartController</servlet-name>
+		<servlet-class>controller.CartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartController</servlet-name>
+		<url-pattern>/view/client/cart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CartUpdate</servlet-name>
+		<servlet-class>controller.CartUpdateController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartUpdate</servlet-name>
+		<url-pattern>/view/client/cart-update</url-pattern>
+	</servlet-mapping>
 
+	
+	<servlet>
+		<servlet-name>CheckoutController</servlet-name>
+		<servlet-class>controller.CheckoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckoutController</servlet-name>
+		<url-pattern>/view/client/checkout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CheckoutResultController</servlet-name>
+		<servlet-class>controller.CheckoutResultController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CheckoutResultController</servlet-name>
+		<url-pattern>/view/client/checkoutresult</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderGuideController</servlet-name>
+		<servlet-class>controller.OrderGuideController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>OrderGuideController</servlet-name>
+		<url-pattern>/view/client/orderGuide</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PolicyController</servlet-name>
+		<servlet-class>controller.PolicyController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>PolicyController</servlet-name>
+		<url-pattern>/view/client/policy</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ContactController</servlet-name>
+		<servlet-class>controller.ContactController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ContactController</servlet-name>
+		<url-pattern>/view/client/contact</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

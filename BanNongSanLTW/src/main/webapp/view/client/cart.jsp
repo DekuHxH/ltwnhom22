@@ -1,20 +1,11 @@
-<%-- 
-    Document   : index
-    Created on : May 5, 2020, 10:57:00 PM
-    Author     : LENOVO
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<c:url value = "/view/client/assets" var="url"/>
-  <!-- Start header section -->
-  <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
-  <!-- / header section -->
-  
+<%@ include file="/view/client/includes/header.jsp" %> 
+
 <!--  content -->
 <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${pageContext.request.contextPath}/view/client/assets/images/banner-cart.png" alt="banner giỏ hàng">
+   <img src="${pageContext.request.contextPath}/view/client/images/banner-cart.png" alt="banner giỏ hàng">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
@@ -54,7 +45,7 @@
                       <c:forEach items="${order.items}" var="item">
                       <tr>
                         <td><a class="remove" href="${pageContext.request.contextPath}/view/client/cart-delete?id=${item.product.id}"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${item.product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img${item.product.name }"></a></td>
+                        <td><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${item.product.id}"><img src="${pageContext.request.contextPath}/view/client/images/products/img-test/${item.product.image_link}" alt="img${item.product.name }"></a></td>
                         <td><a class="aa-cart-title" href="${pageContext.request.contextPath}/view/client/product-detail?id=${item.product.id}">${item.product.name }</a></td>
                         <td>${item.product.price} VNĐ</td>
                         <td><input class="aa-cart-quantity" type="number" name="${item.product.id}" value="${item.qty}" min=1></td>
@@ -106,7 +97,7 @@
  <!-- / Cart view section -->
 
 <!--  end content-->
-  
-<!--  footer-->
- <jsp:include page = "./footer/footer.jsp" flush = "true" />
-<!-- end footer-->
+	<%@ include file="/view/client//includes/footer.jsp" %>   
+	<%@ include file="/view/client//includes/script.jsp" %> 
+  </body>
+</html>
