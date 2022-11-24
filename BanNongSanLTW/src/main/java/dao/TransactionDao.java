@@ -10,10 +10,9 @@ import java.util.List;
 import jdbc.ConnectDB;
 import bean.Transactions;
 
-public class TransactionDao extends ConnectDB {
+public class TransactionDao {
 	public void insert(Transactions transaction) { 
 		String sql = "INSERT INTO transactions(user_session,user_name,user_mail,user_phone,address,message,amount,payment,created) VALUES (?,?,?,?,?,?,?,?,?)"; 
-		new ConnectDB(); 
 		Connection con = ConnectDB.getConnection(); 
  
 		try { 
@@ -36,7 +35,6 @@ public class TransactionDao extends ConnectDB {
  
 	public void delete(String id) { 		
 		String sql = "Delete from transactions where id=?";
-		new ConnectDB();
 		Connection con = ConnectDB.getConnection();
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -50,7 +48,6 @@ public class TransactionDao extends ConnectDB {
 	public Transactions get(int id) {		
 		Transactions transaction = new Transactions();
 		String sql = "SELECT * FROM transactions WHERE id=?";
-		new ConnectDB();
 		Connection con = ConnectDB.getConnection();
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -80,7 +77,6 @@ public class TransactionDao extends ConnectDB {
 	public void edit(Transactions transaction) { 
 	String sql = "Update transactions set user_name =?, user_mail =?, user_phone =?, address= ?,message=?,amount=?,payment=?, status=? where id=?";
 
-		new ConnectDB();
 		Connection con = ConnectDB.getConnection();
 		try 
 		{

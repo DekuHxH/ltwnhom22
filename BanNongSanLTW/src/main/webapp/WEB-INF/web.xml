@@ -170,4 +170,219 @@
 		<url-pattern>/view/client/contact</url-pattern>
 	</servlet-mapping>
 	
+	
+	<!--  Admin Router -->
+	<servlet>
+       <servlet-name>AdminLogin</servlet-name>
+       <servlet-class>controller.admin.AdminLoginController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>AdminLogin</servlet-name>
+       <url-pattern>/admin/login</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>AdminHomePage</servlet-name>
+       <servlet-class>controller.admin.AdminHomePage</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>AdminHomePage</servlet-name>
+       <url-pattern>/admin/homepage</url-pattern>
+   </servlet-mapping>
+	
+	<servlet>
+       <servlet-name>listAdmin</servlet-name>
+       <servlet-class>controller.admin.AdminListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listAdmin</servlet-name>
+       <url-pattern>/admin/admin/list</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>addAdmin</servlet-name>
+       <servlet-class>controller.admin.AdminAddController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>addAdmin</servlet-name>
+       <url-pattern>/admin/admin/add</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>deleteAdmin</servlet-name>
+       <servlet-class>controller.admin.AdminDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteAdmin</servlet-name>
+       <url-pattern>/admin/admin/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editAdmin</servlet-name>
+       <servlet-class>controller.admin.AdminEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editAdmin</servlet-name>
+       <url-pattern>/admin/admin/edit</url-pattern>
+   </servlet-mapping>
+   
+   
+   <servlet>
+       <servlet-name>listUser</servlet-name>
+       <servlet-class>controller.admin.UserListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listUser</servlet-name>
+       <url-pattern>/admin/user/list</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>deleteUser</servlet-name>
+       <servlet-class>controller.admin.UserDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteUser</servlet-name>
+       <url-pattern>/admin/user/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editUser</servlet-name>
+       <servlet-class>controller.admin.UserEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editUser</servlet-name>
+       <url-pattern>/admin/user/edit</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listCategory</servlet-name>
+       <servlet-class>controller.admin.CategoryListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listCategory</servlet-name>
+       <url-pattern>/admin/cate/list</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>addCategory</servlet-name>
+       <servlet-class>controller.admin.CategoryAddController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>addCategory</servlet-name>
+       <url-pattern>/admin/cate/add</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>deleteCategory</servlet-name>
+       <servlet-class>controller.admin.CategoryeDeleteController</servlet-class>
+   </servlet>
+   
+   
+   <servlet-mapping>
+       <servlet-name>deleteCategory</servlet-name>
+       <url-pattern>/admin/cate/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editCategory</servlet-name>
+       <servlet-class>controller.admin.CategoryEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editCategory</servlet-name>
+       <url-pattern>/admin/cate/edit</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listProduct</servlet-name>
+       <servlet-class>controller.admin.ProductListController</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>listProduct</servlet-name>
+       <url-pattern>/admin/product/list</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>addProduct</servlet-name>
+       <servlet-class>controller.admin.ProductAddController</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>addProduct</servlet-name>
+       <url-pattern>/admin/product/add</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>deleteProduct</servlet-name>
+       <servlet-class>controller.admin.ProductDeleteController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>deleteProduct</servlet-name>
+       <url-pattern>/admin/product/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editProduct</servlet-name>
+       <servlet-class>controller.admin.ProductEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editProduct</servlet-name>
+       <url-pattern>/admin/product/edit</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listOrder</servlet-name>
+       <servlet-class>controller.admin.OrderListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listOrder</servlet-name>
+       <url-pattern>/admin/order/list</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listOrderdetail</servlet-name>
+       <servlet-class>controller.admin.OrderdetailListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listOrderdetail</servlet-name>
+       <url-pattern>/admin/order/list-detail</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listReview</servlet-name>
+       <servlet-class>controller.admin.ReviewListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listReview</servlet-name>
+       <url-pattern>/admin/review/list</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>deleteReview</servlet-name>
+       <servlet-class>controller.admin.ReviewDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteReview</servlet-name>
+       <url-pattern>/admin/review/delete</url-pattern>
+   </servlet-mapping>
+   
+   
 </web-app>

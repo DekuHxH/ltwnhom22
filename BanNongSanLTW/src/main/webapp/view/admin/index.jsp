@@ -133,6 +133,5 @@
         </ul>
       </div>
     </div>
-  </div>
   
     <jsp:include page = "./footer/footer.jsp" flush = "true" />

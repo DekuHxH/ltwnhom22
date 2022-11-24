@@ -31,7 +31,6 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Tên chuyên mục</th>
-                        <th scope="col">Chuyên mục cha</th>
                         <th scope="col">Hành động</th>
                         
                       </tr>
