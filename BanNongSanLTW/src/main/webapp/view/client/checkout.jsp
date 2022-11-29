@@ -46,7 +46,7 @@
                          <div class="row">
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill">
-                                <input type="text" placeholder="Họ Tên*" required="required" name="transaction_name">
+                                <input type="text" value="${sessionScope.username}" required="required" name="transaction_name">
                               </div>                             
                             </div>
                           
@@ -55,12 +55,12 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="aa-checkout-single-bill">
-                                <input type="email" placeholder="Email*" required="required" name="transaction_email">
+                                <input type="email" value="${sessionScope.email}" required="required" name="transaction_email">
                               </div>                             
                             </div>
                             <div class="col-md-6">
                               <div class="aa-checkout-single-bill">
-                                <input type="tel" placeholder="Số điện thoại*" required="required" name="transaction_phone">
+                                <input type="tel" value="${sessionScope.phone}" required="required" name="transaction_phone">
                               </div>
                             </div>
                           </div> 

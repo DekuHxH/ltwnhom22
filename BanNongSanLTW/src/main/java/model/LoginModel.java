@@ -10,28 +10,32 @@ import jdbc.ConnectDB;
 
 public class LoginModel {
 	
-	public static boolean checkLogin(String username, String password) {
+	public static User checkLogin(String username, String password) {
 				
 		try {
 			Connection connection = ConnectDB.getConnection();
 			PreparedStatement ps = null;
 			ResultSet rs = null;
-			
-			String query = "select username, password from users where username = ? AND password = ?";
+			User user =new User();
+			String query = "select * from users where username = ? AND password = ?";
 			
 			ps = connection.prepareStatement(query);
 			ps.setString(1, username);
 			ps.setString(2, password);
 			rs = ps.executeQuery();
-			
 			if(rs.next()) {
-				return true;
+				user.setId(rs.getInt("id"));
+				user.setName(rs.getString("name"));
+				user.setEmail(rs.getString("email"));
+				user.setPhone(rs.getString("phone"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
+				user.setCreated(rs.getString("created"));
+				return user;
 			}		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		return false;
-		
+		return null;		
 	}	
 }

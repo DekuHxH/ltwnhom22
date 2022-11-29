@@ -30,11 +30,11 @@ public class ProductDetailController extends HttpServlet {
 		List<Catalog> name_cata_of_product= catalogModel.getCataByProduct(Integer.parseInt(id));
 		req.setAttribute("name_cata_of_product", name_cata_of_product);
 		
-		String idCate = detail_product.getCatalog_id();
+		String idCata = detail_product.getCatalog_id();
 		
-		List<Product> productListCate = productModel.getProductById(Integer.parseInt(idCate));
+		List<Product> productListCata = productModel.getProductById(Integer.parseInt(idCata));
 		
-		req.setAttribute("productById", productListCate);
+		req.setAttribute("productById", productListCata);
 		
 		List<Product> productList = productModel.getAll();
 		req.setAttribute("productlist", productList);	

@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import model.LoginModel;
 
 import bean.User;
-
 public class LoginController extends HttpServlet {
 
 	/**
@@ -39,11 +38,13 @@ public class LoginController extends HttpServlet {
 
 		String username = request.getParameter("userName");
 		String password = request.getParameter("userPassword");
-
 		try {
-			if (LoginModel.checkLogin(username, password)) {
+			User user= LoginModel.checkLogin(username, password);
+			if (user!=null) {
 				HttpSession session = request.getSession();
-				session.setAttribute("username", username);
+				session.setAttribute("username", user.getName());
+				session.setAttribute("email", user.getEmail());
+				session.setAttribute("phone", user.getPhone());
 				response.sendRedirect(request.getContextPath() + "/");
 			} else {
 				request.setAttribute("thongBaoLoiLogin", "Tài khoản đăng nhập hoặc mật khẩu không hợp lệ !!!");
