@@ -22,7 +22,7 @@
 		<div class="form">
 			<form class="login-form" name="login-form" action="LoginPage"
 				method="post">
-				<h2>NongSan24h Xin Chào</h2>
+				<h2>NongSan22 Xin Chào</h2>
 				<input type="text" name="userName" placeholder="Tên Đăng Nhập" /> <input
 					type="password" name="userPassword" placeholder="Mật Khẩu" />
 				<button type="submit">Đăng Nhập</button>

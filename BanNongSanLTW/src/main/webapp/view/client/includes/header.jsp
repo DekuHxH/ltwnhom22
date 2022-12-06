@@ -194,7 +194,7 @@
             <!-- Left nav -->
             <ul class="nav navbar-nav">
               <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
-              <li><a href="">Giới thiệu</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/introduce">Giới thiệu</a></li>
               <li><a href="${pageContext.request.contextPath}/view/client/product">Sản phẩm <span class="caret"></span></a>
                 <ul class="dropdown-menu">  
                   <li><a href="${pageContext.request.contextPath}/view/client/product-id?id=1">Rau củ</a></li>                                                                

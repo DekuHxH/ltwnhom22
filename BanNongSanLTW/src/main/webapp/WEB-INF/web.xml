@@ -170,8 +170,15 @@
 		<url-pattern>/view/client/contact</url-pattern>
 	</servlet-mapping>
 	
-	
-	<!--  Admin Router -->
+	<servlet>
+		<servlet-name>introduce</servlet-name>
+		<servlet-class>controller.IntroduceController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>introduce</servlet-name>
+		<url-pattern>/view/client/introduce</url-pattern>
+	</servlet-mapping>
+	<!--  Admin -->
 	<servlet>
        <servlet-name>AdminLogin</servlet-name>
        <servlet-class>controller.admin.AdminLoginController</servlet-class>

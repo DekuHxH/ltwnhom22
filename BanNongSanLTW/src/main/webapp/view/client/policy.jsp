@@ -3,7 +3,7 @@
 <%@ include file="/view/client/includes/header.jsp" %> 
 
   <section id="aa-catg-head-banner">
-   <img src="${pageContext.request.contextPath}/view/client/assets/images/banner_tc.jpg" alt="banner sản phẩm">
+   <img src="${pageContext.request.contextPath}/view/client/images/banner_tc.jpg" alt="banner sản phẩm">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
@@ -21,7 +21,7 @@
       <div class="row">
       	<div>
       		<h1 style ="text-align: center; color: red;">Chính Sách Bảo Mật</h1>
-      		<strong>Cám ơn quý khách đã truy cập vào website Nông Sản 24h</strong><br><br>
+      		<strong>Cám ơn quý khách đã truy cập vào website Nông Sản 22</strong><br><br>
       		<p>Chúng tôi tôn trọng và cam kết sẽ bảo mật những thông tin mang tính riêng tư của bạn. 
       		Xin vui lòng đọc bản Chính sách bảo mật dưới đây để hiểu hơn những cam kết mà chúng tôi thực 
       		hiện nhằm tôn trọng và bảo vệ quyền lợi của người truy cập.</p>
@@ -35,30 +35,7 @@
       		<p>Chúng tôi sẽ giữ thông tin của khách hàng trong thời gian luật pháp quy định hoặc cho mục đích nào đó. 
       		Quý khách có thể truy cập vào website và trình duyệt mà không cần phải cung cấp chi tiết cá nhân. Lúc đó, 
       		bạn đang ẩn danh và chúng tôi không thể biết bạn là ai nếu bạn không đăng nhập vào tài khoản của mình.</p>
-      		<strong>1. Thu thập thông tin cá nhân</strong>
-      		<p>
-      		Chúng tôi sẽ thu thập nhiều thông tin khác nhau của quý khách khi bạn muốn đặt hàng trên website thegioinongsan.net<br><br>
       		
-			Chúng tôi thu thập, lưu trữ và xử lý thông tin của bạn cho quá trình mua hàng và cho những thông báo sau này, và để cung cấp dịch vụ. 
-			Chúng tôi không giới hạn thông tin cá nhân: danh hiệu, tên, giới tính, ngày sinh, email, địa chỉ, địa chỉ giao hàng, số điện thoại, fax, 
-			chi tiết thanh toán, chi tiết thanh toán bằng thẻ hoặc chi tiết tài khoản ngân hàng.<br><br>
-			
-			Chúng tôi sẽ dùng thông tin quý khách đã cung cấp để xử lý đơn đặt hàng, cung cấp các dịch vụ và thông tin yêu cầu thông qua website và 
-			theo yêu cầu của bạn. Hơn nữa, chúng tôi sẽ sử dụng các thông tin đó để quản lý tài khoản của bạn; xác minh và thực hiện giao dịch trực 
-			tuyến, kiểm toán việc tải dữ liệu từ web; cải thiện bố cục và nội dung trang web và điều chỉnh cho phù hợp với người dùng; nhận diện khách vào web, 
-			nghiên cứu nhân khẩu học, gửi thông tin bao gồm thông tin sản phẩm và dịch vụ, nếu bạn không có dấu hiệu từ chối. Nếu quý khách không muốn nhận bất 
-			cứ thông tin tiếp thị của chúng tôi thì có thể từ chối bất cứ lúc nào.<br><br>
-
-			Chúng tôi có thể chuyển tên và địa chỉ cho bên thứ ba để họ giao hàng cho bạn (ví dụ cho bên chuyển phát nhanh hoặc nhà cung cấp).<br><br>
-
-			Các khoản thanh toán trực tuyến sẽ được xử lý bởi các cổng thanh toán đảm bảo và hệ thống ngân hàng. Quý khách chỉ đưa cho chúng tôi hoặc website những thông tin 
-			chính xác, không gây nhầm lẫn và phải thông báo cho chúng tôi nếu có thay đổi.<br><br>
-
-			Chi tiết đơn đặt hàng của bạn được chúng tôi lưu giữ nhưng vì lí do bảo mật nên chúng tôi không công khai trực tiếp được. Tuy nhiên, quý khách có thể tiếp cận thông 
-			tin bằng cách đăng nhập tài khoản trên web. Tại đây, bạn sẽ thấy chi tiết đơn đặt hàng của mình, những sản phẩm đã nhận và những sản phẩm đã gửi và chi tiết email, 
-			ngân hàng và bản tin mà bạn đặt theo dõi dài hạn. Quý khách cam kết bảo mật dữ liệu cá nhân và không được phép tiết lộ cho bên thứ ba. Chúng tôi không chịu bất kỳ trách 
-			nhiệm nào cho việc dùng sai mật khẩu nếu đây không phải lỗi của chúng tôi.
-      		</p>
       		<strong><i>Điều lệ khác về thông tin cá nhân</i></strong>
       		<p>Chúng tôi có thể dùng thông tin cá nhân của bạn để nghiên cứu thị trường. Chi tiết sẽ được ẩn và chỉ được dùng để thống kê. Quý khách có thể từ chối không tham gia bất 
       		cứ lúc nào. Bất kỳ câu trả lời cho khảo sát hoặc thăm dò dư luận mà chúng tôi cần bạn làm sẽ không được chuyển cho bên thứ ba. Việc cần thiết duy nhất là tiết lộ email của 
