@@ -10,11 +10,11 @@
       </div>
       <ul class="sidebar-menu do-nicescrol">
         <li class="sidebar-header">MENU ADMIN</li>
-        <li>
-          <a href="${pageContext.request.contextPath}/admin/homepage">
-            <i class="zmdi zmdi-view-dashboard"></i> <span>Tổng quan</span>
-          </a>
-        </li>
+<!--         <li> -->
+<%--           <a href="${pageContext.request.contextPath}/admin/homepage"> --%>
+<!--             <i class="zmdi zmdi-view-dashboard"></i> <span>Tổng quan</span> -->
+<!--           </a> -->
+<!--         </li> -->
         
          <li>
           <a href="${pageContext.request.contextPath}/admin/admin/list">
@@ -47,11 +47,11 @@
             <i class="zmdi zmdi-shopping-cart"></i> <span>Chi Tiết Đơn Hàng</span>
           </a>
         </li>
-        <li>
-          <a href="${pageContext.request.contextPath}/admin/review/list">
-            <i class="zmdi zmdi-calendar-check"></i> <span>Review</span>
-          </a>   
-        </li>
+<!--         <li> -->
+<%--           <a href="${pageContext.request.contextPath}/admin/review/list"> --%>
+<!--             <i class="zmdi zmdi-calendar-check"></i> <span>Review</span> -->
+<!--           </a>    -->
+<!--         </li> -->
 
       </ul>
     </div>

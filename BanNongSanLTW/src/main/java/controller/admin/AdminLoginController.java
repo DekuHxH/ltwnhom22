@@ -24,13 +24,16 @@ public class AdminLoginController extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    	HttpSession session = request.getSession();
+		session.invalidate();
     	RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/view/admin/login.jsp");
     	dispatcher.forward(request, response);
     }
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	   response.setContentType("text/html");   
-		 
+    	response.setContentType("text/html");   
+    	
+   		
 		String username = request.getParameter("admin-username");
 		String password = request.getParameter("admin-password");
 		Admin admin = new Admin();
@@ -41,9 +44,11 @@ public class AdminLoginController extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("admin-username", username);
 			session.setAttribute("admin-password", password);
-			response.sendRedirect(request.getContextPath() + "/admin/homepage"); 
+			response.sendRedirect(request.getContextPath() + "/admin/admin/list"); 
 		}
 		else {System.out.print(username + " " + password);
+			HttpSession session = request.getSession();
+			session.invalidate();
             request.setAttribute("errorMessage", "Tài khoản đăng nhập hoặc mật khẩu sai !!!");
             RequestDispatcher rd = request.getRequestDispatcher("/view/admin/login.jsp");
             rd.forward(request, response);     
