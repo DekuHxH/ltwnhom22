@@ -52,12 +52,8 @@
 	                      <span class="aa-product-price">${detail_product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
-	                      <c:forEach items="${productlist1}" var="product1">
-	                      	<c:if test="${product1.id == detail_product.id}">
-		                      <span class="aa-product-price"><strong>${product1.price} VNĐ</strong></span>
-		                      <span class="aa-product-price"><del>${detail_product.price} VNĐ</del></span>
-	                      </c:if>
-	                      </c:forEach>
+	                      <span class="aa-product-price"><strong>${detail_product1.price} VNĐ</strong></span>
+		                  <span class="aa-product-price"><del>${detail_product.price} VNĐ</del></span>
 	                    </c:otherwise>
 	                     </c:choose>
                    
@@ -77,7 +73,7 @@
                      
                       <p class="aa-prod-category">
                        <c:forEach items="${name_cate_of_product}" var="name_cate">
-                        <strong>Danh mục:</strong> <a href="product.jsp">${name_cate.name }</a>
+                        <strong>Danh mục:</strong> <a href="product.jsp">${name_cate.name}</a>
                         </c:forEach>
                       </p>
                     </div>

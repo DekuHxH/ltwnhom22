@@ -36,19 +36,25 @@ public class ProductDetailController extends HttpServlet {
 		
 		req.setAttribute("productById", productListCata);
 		
-		List<Product> productList = productModel.getAll();
-		req.setAttribute("productlist", productList);	
-		//Giá giảm
-		List<Product> productsList1 = new ArrayList<Product>();
-		for(Product product: productList)
-		{
-			Product product1 = productModel.get(Integer.parseInt(product.getId()));
-			product1.setPrice(String.valueOf(df.format(Double.parseDouble(product.getPrice()) * (1 - (Double.parseDouble(product.getDiscount())/100)))));
-			productsList1.add(product1);
-			
-		}
-
-		req.setAttribute("productlist1", productsList1);
+		Product detail_product1 = detail_product;
+		detail_product1.setPrice(String.valueOf(df.format(Double.parseDouble(detail_product.getPrice()) * (1 - (Double.parseDouble(detail_product.getDiscount())/100)))));
+		req.setAttribute("detail_product1", detail_product1);
+		
+//		List<Product> productList = productModel.getAll();
+//		req.setAttribute("productlist", productList);	
+//		//Giá giảm
+//		List<Product> productsList1 = new ArrayList<Product>();
+//		for(Product product: productList)
+//		{
+//			Product product1 = productModel.get(Integer.parseInt(product.getId()));
+//			product1.setPrice(String.valueOf(df.format(Double.parseDouble(product.getPrice()) * (1 - (Double.parseDouble(product.getDiscount())/100)))));
+//			productsList1.add(product1);
+//			
+//		}
+//
+//		req.setAttribute("productlist1", productsList1);
+		
+		
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/product-detail.jsp");
 		dispatcher.forward(req, resp);

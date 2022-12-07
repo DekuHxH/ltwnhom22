@@ -44,19 +44,19 @@ public class HomeController extends HttpServlet{
 		List<Product> product_banchay= ProductModel.getProductById(6);
 		req.setAttribute("product_banchay", product_banchay);	
 		
-		List<Product> productList = ProductModel.getAll();
-		req.setAttribute("productlist", productList);	
-		//Giá giảm
-		List<Product> productsList1 = new ArrayList<Product>();
-		for(Product product: productList)
-		{
-			Product product1 = ProductModel.get(Integer.parseInt(product.getId()));
-			product1.setPrice(String.valueOf(df.format(Double.parseDouble(product.getPrice()) * (1 - (Double.parseDouble(product.getDiscount())/100)))));
-			productsList1.add(product1);
-			
-		}
-
-		req.setAttribute("productlist1", productsList1);
+//		List<Product> productList = ProductModel.getAll();
+//		req.setAttribute("productlist", productList);	
+//		//Giá giảm
+//		List<Product> productsList1 = new ArrayList<Product>();
+//		for(Product product: productList)
+//		{
+//			Product product1 = ProductModel.get(Integer.parseInt(product.getId()));
+//			product1.setPrice(String.valueOf(df.format(Double.parseDouble(product.getPrice()) * (1 - (Double.parseDouble(product.getDiscount())/100)))));
+//			productsList1.add(product1);
+//			
+//		}
+//
+//		req.setAttribute("productlist1", productsList1);
 		
 		// Product giảm giá
 		List<Product> product_sale= ProductModel.getProductById(7);

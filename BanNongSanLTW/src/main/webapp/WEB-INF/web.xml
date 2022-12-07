@@ -120,6 +120,14 @@
 		<url-pattern>/view/client/cart-update</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>CartDelete</servlet-name>
+		<servlet-class>controller.CartDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartDelete</servlet-name>
+		<url-pattern>/view/client/cart-delete</url-pattern>
+	</servlet-mapping>
 	
 	<servlet>
 		<servlet-name>CheckoutController</servlet-name>
