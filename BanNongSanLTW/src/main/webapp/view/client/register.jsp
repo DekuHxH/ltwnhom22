@@ -13,19 +13,12 @@
 <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
 <link id="switcher" href="css/theme-color/default-theme.css"
 	rel="stylesheet">
-<link href="view/client/css/login-register.css" rel="stylesheet"
+<link href="view/client/css/login-register1.css" rel="stylesheet"
 	type="text/css">
 
 </head>
 
 <body>
-
-	<!-- wpf loader Two -->
-	<div id="wpf-loader-two" style="background: #00ff00">
-		<div class="wpf-loader-two-inner">
-			<span>Loading</span>
-		</div>
-	</div>
 
 	<div class="register-page">
 		<div class="form">
