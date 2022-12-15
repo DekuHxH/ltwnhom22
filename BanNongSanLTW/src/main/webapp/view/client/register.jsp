@@ -13,7 +13,7 @@
 <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
 <link id="switcher" href="css/theme-color/default-theme.css"
 	rel="stylesheet">
-<link href="view/client/css/login-register1.css" rel="stylesheet"
+<link href="view/client/css/login-register2.css" rel="stylesheet"
 	type="text/css">
 
 </head>
