@@ -53,8 +53,10 @@ public class RegisterController extends HttpServlet {
 				
 				Thread.sleep(3000);
 				
-				RequestDispatcher rd = request.getRequestDispatcher("/");
-				rd.forward(request, response);
+				//RequestDispatcher rd = request.getRequestDispatcher("/");
+				//rd.forward(request, response);
+				
+				response.sendRedirect(request.getContextPath() + "/");
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
